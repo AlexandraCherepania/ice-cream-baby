@@ -28,16 +28,821 @@
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
 
-    <include src="./partials/hero-header.html"></include>
-    <include src="./partials/products.html"></include>
-    <include src="./partials/about.html"></include>
-    <include src="./partials/advantages.html"></include>
-    <include src="./partials/gallery.html"></include>
-    <include src="./partials/customer-reviews.html"></include>
+    <header class="page-header container" id="header">
+  <a class="logo__link link-decor" href="#"><svg class="logo__pic">
+      <use href="/icons.adfc4680.svg#icon-logo" width="199" height="50"></use>
+    </svg>
+  </a>
+
+  <!-- navigation -->
+
+  <nav class="site-nav">
+    <ul class="site-nav__list list">
+      <li class="site-nav__item current">
+        <a class="nav__link" href="/index.html">Home</a>
+      </li>
+      <li class="site-nav__item">
+        <a class="nav__link" href="#advantages">About us</a>
+      </li>
+      <li class="site-nav__item">
+        <a class="nav__link" href="#about">How it's made?</a>
+      </li>
+      <li class="site-nav__item">
+        <a class="nav__link" href="#products">Our products</a>
+      </li>
+      <li class="site-nav__item">
+        <a class="nav__link" href="#contacts">Contacts</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- modal butoon -->
+
+  <button class="button__main button--visible open-hero-modal" type="button" id="open_hero-modal" data-hero-open="">
+    Buy now
+    <svg class="button__icon">
+      <use class="button__arrow" href="/icons.adfc4680.svg#icon-arrow-btn" width="7" height="10"></use>
+    </svg>
+  </button>
+</header>
+
+<div class="hero container">
+  <!-- Hero -->
+
+  <!-- menu button -->
+  <button class="menu__button" type="button" data-menu-button="" aria-expanded="false">
+    <svg class="menu__pic" aria-label="Переключатель мобільного меню" width="44" height="44">
+      <use class="menu__icon menu__burger" href="/icons.adfc4680.svg#icon-burger" width="40" height="24"></use>
+      <use class="menu__icon menu__close" href="/icons.adfc4680.svg#icon-close" width="16" height="16"></use>
+    </svg>
+  </button>
+
+  <!-- mobile menu -->
+
+  <div class="mobile-menu" data-menu="">
+    <button class="button__main button--mobile" type="button">
+      Buy now
+      <svg class="button__icon">
+        <use class="button__arrow" href="/icons.adfc4680.svg#icon-arrow-btn" width="7" height="10"></use>
+      </svg>
+    </button>
+
+    <!-- mobile bavigation -->
+
+    <ul class="mobile-nav list">
+      <li class="mobile__item">
+        <a class="mobile__link current" href="#header">Home</a>
+      </li>
+      <li class="mobile__item">
+        <a class="mobile__link" href="#advantages">About us</a>
+      </li>
+      <li class="mobile__item">
+        <a class="mobile__link" href="#about">How it's made?</a>
+      </li>
+      <li class="mobile__item">
+        <a class="mobile__link" href="#products">Our products</a>
+      </li>
+      <li class="mobile__item">
+        <a class="mobile__link" href="#contacts">Contacts</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="hero__title--main">
+    <h1 class="hero__title animate__animated animate__flip">
+      ice cream <br>
+      made with <br>
+      <span class="hero__title--accent">passion</span>
+    </h1>
+    <div class="hero__buttons">
+      <a class="button__main button--small button--inverse" href="#products">Products</a>
+      <a class="button__main button--small" href="#about">How it's made?</a>
+    </div>
+  </div>
+  <img class="hero__milk" srcset="/milk-152.3bc1ff9a.png     152w, /milk-304-@2x.5617a432.png 304w, /milk-456-@3x.7a66ce7c.png 456w" sizes="(min-width: 1200px) 456px, (min-width: 768px) 304px, (min-width: 320px) 152px, 100vw" src="/milk-152.3bc1ff9a.png" width="152" alt="A jug of milk">
+
+  <p class="hero__text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et
+  </p>
+
+  <div class="hero__arrow-circle">
+    <svg class="hero__arrow">
+      <use href="/icons.adfc4680.svg#icon-arrow-right" width="8"></use>
+    </svg>
+  </div>
+
+  <div class="hero__circle"></div>
+  <img class="hero__icecream" srcset="/ice-cream-171.3d8efbe7.png     171w, /ice-cream-342-@2x.bc0976b2.png 342w, /ice-cream-513-@3x.483dcec0.png 513w" src="/ice-cream-171.3d8efbe7.png" sizes="(min-width: 1200px) 513px, (min-width: 768px) 342px, (min-width: 320px) 171px, 100vw" width="171" alt="Ice Cream">
+
+  <div class="hero__info hero__info--16">
+    <p>16</p>
+    <p class="hero__text-right">cafes</p>
+  </div>
+  <div class="hero__info hero__info--23">
+    <p>23</p>
+    <p class="hero__text-right">food trucks</p>
+  </div>
+  <img class="hero__girl" srcset="/girl-190.8efee16a.png     190w, /girl-380-@2x.16a85761.png 380w, /girl-570-@3x.8dc8f4d8.png 570w, /girl-760-@4x.ec615e0a.png 760w" sizes="(min-width: 1200px) 570px, (min-width: 768px) 380px, (min-width: 320px) 190px, 100vw" src="/girl-190.8efee16a.png" width="190" alt="A girl with an ice cream">
+</div>
+
+<!-- modal window -->
+
+<div class="hero-modal" id="hero-modal" data-hero-modal="">
+  <div class="hero-modal__container">
+    <div class="hero-modal__body" id="hero-modal__body">
+      <p class="hero-modal__title">Subscribe first!</p>
+
+      <form class="form-header">
+        <ul class="list checkbox-flex">
+          <li>
+            <input class="checkbox" type="checkbox"> <span>Ice Cream</span>
+          </li>
+          <li>
+            <input class="checkbox" type="checkbox"> <span>Ice Coffee</span>
+          </li>
+          <li>
+            <input class="checkbox" type="checkbox"> <span>Milkshake</span>
+          </li>
+        </ul>
+        <input class="hero-modal__input" type="text" placeholder="Name" required="">
+        <input class="hero-modal__input" type="tel" placeholder="Tel" required="">
+        <input class="hero-modal__input" type="email" placeholder="E-mail" required="">
+
+        <div class="hero-modal__buttons">
+          <button class="button__main button--inverse hero-modal__button" type="submit">
+            Subscribe
+          </button>
+          <button class="button__main hero-modal__button" type="submit" data-hero-close="">
+            Close
+          </button>
+        </div>
+        <!-- <button type="button" class="hero-modal__close" id="hero-modal__close">
+          <svg class="hero-modal__close_icon" width="15" height="15">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button> -->
+      </form>
+    </div>
+  </div>
+</div>
+
+    <!-- ========== Products ========== -->
+<section class="section section__products" id="products">
+  <div class="products container">
+    <span class="products__text">100% natural</span>
+    <h2 class="products__title animate__animated animate__jackInTheBox">
+      products
+    </h2>
+
+    <ul class="products__list list">
+      <li class="products__items products__item--rectangle-pink">
+        <h3 class="products__item-title">ice cream</h3>
+        <p class="products__item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products__button" type="button" aria-label="Read more">
+          <svg class="products__icon">
+            <use href="/icons.adfc4680.svg#icon-arrow-right" width="12" height="11"></use>
+          </svg>
+        </button>
+      </li>
+
+      <li class="products__items products__item--rectangle-coffee">
+        <h3 class="products__item-title">ice coffee</h3>
+        <p class="products__item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products__button" type="button" aria-label="Read more">
+          <svg class="products__icon">
+            <use href="/icons.adfc4680.svg#icon-arrow-right" width="12" height="11"></use>
+          </svg>
+        </button>
+      </li>
+
+      <li class="products__items products__item--rectangle-green">
+        <h3 class="products__item-title">milkshakes</h3>
+        <p class="products__item-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.
+        </p>
+        <button class="products__button" type="button" aria-label="Read more">
+          <svg class="products__icon">
+            <use href="/icons.adfc4680.svg#icon-arrow-right" width="12" height="11"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="about section" id="about">
+  <div class="about__container container">
+    <p class="about__subtitle">tradition and love</p>
+
+    <h2 class="about__title">how it’s made?</h2>
+
+    <div class="about__content">
+      <img class="about__img" srcset="/cow-mobile-280.0a80e48c.png       280w, /cow-mobile-2x-560.a8fa2345.png    560w, /cow-tablet-336.c98bc0fb.png       336w, /cow-tablet-2x-672.395d39cb.png    672w, /cow-desktop-501.cc8ea802.png      501w, /cow-desktop-2x-1002.2faaa9d3.png 1002w" sizes="(min-width: 1200px) 501px, (min-width: 768px) 336px, (max-width: 767px) 280px, 100vw" src="/cow-mobile-280.0a80e48c.png" alt="Cow and milk" width="280" height="279">
+
+      <div class="about__descr">
+        <p class="about__text about__text--dark">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+        <p class="about__text about__text--light">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt.
+          <br>
+          <br>Aliquam erat volutpat. Aenean accumsan.
+        </p>
+
+        <button type="button" class="about__button button" data-modal-open="">
+          Read more
+          <svg class="button__icon" width="4.43px" height="8px">
+            <use href="/icons.adfc4680.svg#icon-arrow-btn"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="backdrop is-hidden backdrop__is-hidden" data-modal="">
+      <div class="about__modal modal__is-hidden">
+        <button type="button" class="modal__close-button" data-modal-close="">
+          <svg class="modal__icon icon" width="18" height="18">
+            <use href="/icons.adfc4680.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <div>
+          <h2 class="modal-about__title">How is milk made?</h2>
+          <ul class="modal-about__list list">
+            <li class="modal-about__item item">
+              <p class="modal-about__subtitle"></p>
+              <p class="modal-about__text">
+                Cows are milked using vacuum cups which are attached to the
+                cow's teats. The milk is sent through stainless steel pipes to
+                large refrigerated vats, then stored at 5°C or less. Within 48
+                hours, milk is taken in tankers to a milk factory where it's
+                pasteurised and homogenised.
+              </p>
+            </li>
+
+            <li class="modal-about__item item">
+              <p class="modal-about__subtitle">Pasteurisation</p>
+              <p class="modal-about__text">
+                This technique heats milk to 72°C for no less than 15 seconds,
+                then cooled immediately to destroy any harmful bacteria and
+                micro-organisms. This also extends the shelf life.
+              </p>
+            </li>
+
+            <li class="modal-about__item item">
+              <p class="modal-about__subtitle">Homogenisation</p>
+              <p class="modal-about__text">
+                Milk is put under pressure through fine nozzles, which evenly
+                disperses fat globules. This stops the cream separating and
+                rising to the top, allowing a more consistent texture and taste.
+              </p>
+            </li>
+
+            <li class="modal-about__item item">
+              <p class="modal-about__subtitle">Ultrafiltration</p>
+              <p class="modal-about__text">
+                This moves milk across a membrane under moderate pressure, which
+                holds back protein, fat globules, and a large amount of calcium
+                complexes.
+              </p>
+            </li>
+
+            <li class="modal-about__item item">
+              <p class="modal-about__subtitle">Reverse osmosis</p>
+              <p class="modal-about__text">
+                This is very similar to ultrafiltration, but the membrane holds
+                back most of the milk solids and only lets water pass through.
+                Lactose remains in the product. There is no impact on flavour.
+              </p>
+            </li>
+
+            <li class="modal-about__item item">
+              <p class="modal-about__subtitle">Ultra osmosis</p>
+              <p class="modal-about__text">
+                This is a combination of ultrafiltration and reverse osmosis,
+                but it holds back milk solids and allows both water and salt to
+                pass through.
+              </p>
+            </li>
+
+            <li class="modal-about__item item">
+              <p class="modal-about__subtitle">Spray drying</p>
+              <p class="modal-about__text">
+                This removes water from milk in order to make powdered milk
+                products. Milk’s nutritional value remains the same.
+              </p>
+            </li>
+
+            <li class="modal-about__item item">
+              <p class="modal-about__subtitle">Permeate</p>
+              <p class="modal-about__text">
+                Permeate is a technical term which applies to all membrane
+                filtration processes
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="advantages" id="advantages">
+  <h2 class="visually-hidden">Advantages</h2>
+  <div class="advantages__container">
+    <ul class="advantages__list list">
+      <li class="advantages__item advantages_link milk">
+        <!-- <svg class="advantages__icon">
+          <use href="./images/icons.svg#icon-bucket-milk"></use>
+        </svg> -->
+        <p class="advantages__bolt">721</p>
+        <p class="advantages__text">
+          Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+        </p>
+      </li>
+      <li class="advantages__item advantages_link apple">
+        <!-- <svg class="advantages__icon">
+          <use href="./images/icons.svg#icon-bucket-apple"></use>
+        </svg> -->
+        <p class="advantages__bolt">16kg</p>
+        <p class="advantages__text">
+          Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+        </p>
+      </li>
+      <li class="advantages__item advantages_link heard">
+        <!-- <svg class="advantages__icon">
+          <use href="./images/icons.svg#icon-heart"></use>
+        </svg> -->
+        <p class="advantages__bolt">84</p>
+        <p class="advantages__text">
+          Aliquam ac dui vel dui vulputate consectetur. Mauris massa.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    <section class="section gallery-section">
+  <div class="gallery__container">
+    <h2 class="visually-hidden">Gallery</h2>
+
+    <div class="gallery__wrapper">
+      <div class="grid_element column_1">
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img01_lg.b8a5e5e3.webp    1x, /gall_img01_lg@2x.fe40c1c3.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img01_lg.8dce53ba.jpg    1x, /gall_img01_lg@2x.ba782c9b.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img01_md.bb4960f8.webp    1x, /gall_img01_md@2x.9c6e3775.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img01_md.d6a2190d.jpg    1x, /gall_img01_md@2x.e52bdae3.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img01_sm.a6afe280.webp    1x, /gall_img01_sm@2x.828f7a9d.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img01_sm.b65143a2.jpg    1x, /gall_img01_sm@2x.64f209b5.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img01_lg.8dce53ba.jpg" alt="Green ice-cream in wooden plate">
+        </picture>
+      </div>
+      <div class="grid_element column_2">
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img02_lg.37585cf0.webp    1x, /gall_img02_lg@2x.1e4a0c56.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img02_lg.6208cced.jpg    1x, /gall_img02_lg@2x.1b296c30.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img02_md.464333fb.webp    1x, /gall_img02_md@2x.10e58310.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img02_md.250c76f0.jpg    1x, /gall_img02_md@2x.1c39e691.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img02_sm.ccc68852.webp    1x, /gall_img02_sm@2x.85981694.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img02_sm.80743637.jpg    1x, /gall_img02_sm@2x.7e968cff.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img02_lg.6208cced.jpg" alt="Rose ice-cream in a cone">
+        </picture>
+
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img03_lg.a27891dc.webp    1x, /gall_img03_lg@2x.a2ad7a7b.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img03_lg.b4f760ea.jpg    1x, /gall_img03_lg@2x.69ee0ee8.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img03_md.2e7899c3.webp    1x, /gall_img03_md@2x.daf0cee7.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img03_md.fdd51bdf.jpg    1x, /gall_img03_md@2x.977c6533.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img03_sm.d9013f69.webp    1x, /gall_img03_sm@2x.f89e8348.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img03_sm.f1a3e76d.jpg    1x, /gall_img03_sm@2x.a70818e0.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img03_lg.b4f760ea.jpg" alt="|Raspberry sorbet on marble backgroung">
+        </picture>
+      </div>
+
+      <div class="grid_element column_3">
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img04_lg.80614b35.webp    1x, /gall_img04_lg@2x.75c7104a.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img04_lg.a4a5cd04.jpg    1x, /gall_img04_lg@2x.c130c22d.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img04_md.7500596a.webp    1x, /gall_img04_md@2x.78339151.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img04_md.63932cb8.jpg    1x, /gall_img04_md@2x.23818ce5.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img04_sm.5cafe8bc.webp    1x, /gall_img04_sm@2x.9d818e91.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img04_sm.95dabdec.jpg    1x, /gall_img04_sm@2x.19c93e38.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image gallery__image--big" src="/gall_img04_lg.a4a5cd04.jpg" alt="Many ice-creams in cones">
+        </picture>
+
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img05_lg.219d3143.webp    1x, /gall_img05_lg@2x.74182196.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img05_lg.f6507198.jpg    1x, /gall_img05_lg@2x.f2567afa.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img05_md.cf4ebb54.webp    1x, /gall_img05_md@2x.2a570271.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img05_md.f08215fa.jpg    1x, /gall_img05_md@2x.491a0943.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img05_sm.929cd4fd.webp    1x, /gall_img05_sm@2x.eed72ce7.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img05_sm.b59af379.jpg    1x, /gall_img05_sm@2x.5eaae93a.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img05_lg.f6507198.jpg" alt="Girl eating ice-cream">
+        </picture>
+      </div>
+
+      <div class="grid_element column_4">
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img06_lg.4611ecc3.webp    1x, /gall_img06_lg@2x.f087090b.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img06_lg.7f707038.jpg    1x, /gall_img06_lg@2x.ea0eb8a8.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img06_md.477b232a.webp    1x, /gall_img06_md@2x.0451436e.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img06_md.487bf9fe.jpg    1x, /gall_img06_md@2x.4f898a9a.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img06_sm.8b71ed73.webp    1x, /gall_img06_sm@2x.c04fa83e.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img06_sm.57a6dde1.jpg    1x, /gall_img06_sm@2x.4b9e2871.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img06_lg.7f707038.jpg" alt="Ice-cream in a bowl with fruits">
+        </picture>
+
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img07_lg.e7abb848.webp    1x, /gall_img07_lg@2x.a71a4872.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img07_lg.7b2e0caf.jpg    1x, /gall_img07_lg@2x.ce1d2dff.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img07_md.335baf0e.webp    1x, /gall_img07_md@2x.338211da.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img07_md.af86e832.jpg    1x, /gall_img07_md@2x.d1a70b00.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img07_sm.56ad47b5.webp    1x, /gall_img07_sm@2x.93d99c11.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img07_sm.75f2b58a.jpg    1x, /gall_img07_sm@2x.b7f8a35d.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img07_lg.7b2e0caf.jpg" alt="Girl holding ice-cream on the street">
+        </picture>
+      </div>
+
+      <div class="grid_element column_5">
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img08_lg.0569126b.webp    1x, /gall_img08_lg@2x.f5370b57.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img08_lg.ef2f19f0.jpg    1x, /gall_img08_lg@2x.80c6553e.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img08_md.60c662fa.webp    1x, /gall_img08_md@2x.f50d44d1.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img08_md.0b62cca6.jpg    1x, /gall_img08_md@2x.1e87073e.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img08_sm.177134d8.webp    1x, /gall_img08_sm@2x.3e8ad787.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img08_sm.f5f17802.jpg    1x, /gall_img08_sm@2x.bc4371e5.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img08_lg.ef2f19f0.jpg" alt="Dog licking ice-cream">
+        </picture>
+
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img09_lg.9ace6658.webp    1x, /gall_img09_lg@2x.4a4256bb.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img09_lg.f1ee42b4.jpg    1x, /gall_img09_lg@2x.2f897c9b.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img09_md.d17ef3b4.webp    1x, /gall_img09_md@2x.80cd6481.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img09_md.50ece415.jpg    1x, /gall_img09_md@2x.02dd3260.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img09_sm.4ee3145b.webp    1x, /gall_img09_sm@2x.78ec762a.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img09_sm.90f7d864.jpg    1x, /gall_img09_sm@2x.9e6271ee.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img09_lg.f1ee42b4.jpg" alt="Hand holding coffee beverage">
+        </picture>
+      </div>
+
+      <div class="grid_element column_6">
+        <picture>
+          <!-- desktop screen -->
+          <source media="(min-width: 1200px)" srcset="/gall_img10_lg.c4c5da52.webp    1x, /gall_img10_lg@2x.3021ce22.webp 2x" type="image/webp">
+          <source media="(min-width: 1200px)" srcset="/gall_img10_lg.84840a2b.jpg    1x, /gall_img10_lg@2x.40c9a093.jpg 2x" type="image/jpg">
+
+          <!-- tablet screen -->
+          <source media="(min-width: 768px)" srcset="/gall_img10_md.5ec6e317.webp    1x, /gall_img10_md@2x.9cd49670.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="/gall_img10_md.ac7e61bc.jpg    1x, /gall_img10_md@2x.48811842.jpg 2x" type="image/jpg">
+
+          <!-- mobile screen -->
+          <source media="(max-width: 767px)" srcset="/gall_img10_sm.fa5b9627.webp    1x, /gall_img10_sm@2x.49f03fee.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="/gall_img10_sm.23c4a562.jpg    1x, /gall_img10_sm@2x.1b46233d.jpg 2x" type="image/jpg">
+
+          <img class="gallery__image" src="/gall_img10_lg.84840a2b.jpg" alt="Milkshake, donat and weeped cream">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section review-section">
+  <h2 class="visually-hidden">Reviews</h2>
+  <div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+        <div class="slider__item slider-1">
+          <picture>
+            <source srcset="/rev-img01_lg.2ca41c65.webp    1x, /rev-img01_lg@2x.ec43312e.webp 2x" type="image/webp">
+            <source srcset="/rev-img01_lg.73c4d0bb.jpg    1x, /rev-img01_lg@2x.af9cbee2.jpg 2x" type="image/jpg">
+
+            <img class="review__image" src="/rev-img01_lg.73c4d0bb.jpg" alt="Reviewer-1">
+          </picture>
+
+          <div class="slider__quote">
+            <div class="slider__textarea">
+              <p class="slider__text">
+                Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue.
+                Lorem ipsum primis in nibh vel risus.
+              </p>
+            </div>
+          </div>
+          <p class="slider__title">Emily, Los Angeles</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slider__item slider-2">
+          <picture>
+            <source srcset="/rev-img02_lg.92398d5b.webp    1x, /rev-img02_lg@2x.bb16c848.webp 2x" type="image/webp">
+            <source srcset="/rev-img02_lg.c4eec470.jpg    1x, /rev-img02_lg@2x.98d83d75.jpg 2x" type="image/jpg">
+
+            <img class="review__image" src="/rev-img02_lg.c4eec470.jpg" alt="Reviewer-2">
+          </picture>
+
+          <div class="slider__quote">
+            <div class="slider__textarea">
+              <p class="slider__text">
+                Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue.
+                Lorem ipsum primis in nibh vel risus.
+              </p>
+            </div>
+          </div>
+          <p class="slider__title">Sarah, Los Angeles</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slider__item slider-3">
+          <picture>
+            <source srcset="/rev-img03_lg.7efdb612.webp    1x, /rev-img03_lg@2x.db13493a.webp 2x" type="image/webp">
+            <source srcset="/rev-img03_lg.07cc7193.jpg    1x, /rev-img03_lg@2x.ffc0f57a.jpg 2x" type="image/jpg">
+
+            <img class="review__image" src="/rev-img03_lg.07cc7193.jpg" alt="Reviewer-3">
+          </picture>
+
+          <div class="slider__quote">
+            <div class="slider__textarea">
+              <p class="slider__text">
+                Nullam viverra consectetuer. Quisque cursus et, porttitor risus.
+                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue.
+                Lorem ipsum primis in nibh vel risus.
+              </p>
+            </div>
+          </div>
+          <p class="slider__title">Jessica, Los Angeles</p>
+        </div>
+      </div>
+      ...
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination custom-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+  </div>
+</section>
+
     <!-- <include src="./partials/example.html"></include> -->
-    <include src="./partials/contacts.html"></include>
-    
-    <include src="./partials/footer.html"></include>
+    <!-- section Contacts -->
+
+<section class="contacts" id="contacts">
+  <h2 class="visually-hidden">Contacts</h2>
+  <div class="contacts-container">
+    <div class="contacts-wrapper">
+      <div class="contacts-card">
+        <span class="cafe">cafe</span>
+        <ul class="contacts-card__list list">
+          <li class="contacts-card__city">Chicago</li>
+          <li class="contacts-card__item">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </li>
+        </ul>
+        <ul class="contacts-card__schedule list">
+          <li class="contacts-card__day">Monday - Friday</li>
+          <li class="contacts-card__time time-margin">06:00 AM - 10:00 PM</li>
+          <li class="contacts-card__day">Saturday - Sunday</li>
+          <li class="contacts-card__time">08:00 AM - 16:00 PM</li>
+        </ul>
+        <ul class="auth list">
+          <li class="auth__item">
+            <a class="auth__link link-decor" href="tel:+610383766284">+61(0) 383 766 284</a>
+          </li>
+          <li class="auth__item">
+            <a class="auth__link link-decor" href="mailto:noreply@envato.com">noreply@envato.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contacts-card">
+        <span class="truck">foodtruck</span>
+        <ul class="contacts-card__list list">
+          <li class="contacts-card__city">Los Angeles</li>
+          <li class="contacts-card__item">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </li>
+        </ul>
+        <ul class="contacts-card__schedule list">
+          <li class="contacts-card__day">Monday - Friday</li>
+          <li class="contacts-card__time time-margin">06:00 AM - 10:00 PM</li>
+          <li class="contacts-card__day">Saturday - Sunday</li>
+          <li class="contacts-card__time">08:00 AM - 16:00 PM</li>
+        </ul>
+        <ul class="auth list">
+          <li class="auth__item">
+            <a class="auth__link link-decor" href="tel:+610383766284">+61(0) 383 766 284</a>
+          </li>
+          <li class="auth__item">
+            <a class="auth__link link-decor" href="mailto:noreply@envato.com">noreply@envato.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contacts-card">
+        <span class="cafe">cafe</span>
+        <ul class="contacts-card__list list">
+          <li class="contacts-card__city">New York</li>
+          <li class="contacts-card__item">
+            Fusce ut velit laoreet, tempus arcu molestie vulputate
+          </li>
+        </ul>
+        <ul class="contacts-card__schedule list">
+          <li class="contacts-card__day">Monday - Friday</li>
+          <li class="contacts-card__time time-margin">06:00 AM - 10:00 PM</li>
+          <li class="contacts-card__day">Saturday - Sunday</li>
+          <li class="contacts-card__time">08:00 AM - 16:00 PM</li>
+        </ul>
+        <ul class="auth list">
+          <li class="auth__item">
+            <a class="auth__link link-decor" href="tel:+610383766284">+61(0) 383 766 284</a>
+          </li>
+          <li class="auth__item">
+            <a class="auth__link link-decor" href="mailto:noreply@envato.com">noreply@envato.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="contacts-btn">
+      <button class="contacts-btn--accent js-open-modal" data-modal="1" type="button">
+        Our Locations
+        <svg class="contacts-btn--svg-dark" width="6" height="10">
+          <use class="test2" href="/icons.adfc4680.svg#icon-arrow-mod"></use>
+        </svg>
+      </button>
+
+      <button class="contacts-btn--light js-open-modal" data-modal="2" type="button">
+        Franchise
+        <svg class="contacts-btn--svg-light" width="6" height="10">
+          <use href="/icons.adfc4680.svg#icon-arrow-btn"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- modal -->
+
+  <div class="contacts-modal" data-modal="1">
+    <!--   Svg иконка для закрытия окна  -->
+    <svg class="modal__close-button js-modal-close" width="15" height="15">
+      <use href="/icons.adfc4680.svg#icon-close"></use>
+    </svg>
+    <p class="modal__title">Our Locations</p>
+    <ul class="list">
+      <li>
+        <a class="modal__link link-decor" href="https://goo.gl/maps/UXeagnvXm9K7VEiA8" target="_blank" rel="noopener noreferrer">
+          Chicago
+        </a>
+      </li>
+      <li>
+        <a class="modal__link link-decor" href="https://goo.gl/maps/e6546TqZv5scEhny5" target="_blank" rel="noopener noreferrer">
+          Los Angeles
+        </a>
+      </li>
+      <li>
+        <a class="modal__link link-decor" href="https://goo.gl/maps/LWchoU1z5TMd5HDz5" target="_blank" rel="noopener noreferrer">
+          New York
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="contacts-modal" data-modal="2">
+    <svg class="modal__close-button js-modal-close" width="18" height="18">
+      <use href="/icons.adfc4680.svg#icon-close"></use>
+    </svg>
+    <p class="modal__title">Are you looking for a franchise?</p>
+    <ul class="contacts-modal__list list">
+      <li class="contacts-modal__pimary-item">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero unde
+        corrupti nesciunt aliquid dolores quae ipsum dolor nulla quas minima sed
+        temporibus quod facere cupiditate, neque totam a suscipit sit.
+      </li>
+      <li class="contacts-modal__secondary-item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        sapiente, dolorem ab cupiditate quibusdam, doloremque, quis reiciendis
+        soluta dicta quaerat similique?
+      </li>
+    </ul>
+  </div>
+
+  <!-- Подложка под модальным окном -->
+  <div class="overlay js-overlay-modal"></div>
+</section>
+
+    <!--Footer section-->
+<footer class="page-footer">
+  <div class="container footer-nav">
+    <div class="footer-list">
+      <a class="footer-list__home" href="#">homemade ice cream made</a>
+      <a class="footer-list__passion" href="#">with passion</a>
+    </div>
+    <div class="footer-social">
+      <ul class="footer-social__list">
+        <li class="footer-social__item">
+          <a class="footer-social__link" href="https://github.com/">
+            <svg class="footer-social__icon" width="32" height="32">
+              <use href="/icons.adfc4680.svg#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social__icon">
+          <a class="footer-social__link" href="https://web.telegram.org/">
+            <svg class="footer-social__icon" width="32" height="32">
+              <use href="/icons.adfc4680.svg#icon-telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social__icon">
+          <a class="footer-social__link" href="https://www.facebook.com/">
+            <svg class="footer-social__icon" width="32" height="32">
+              <use href="/icons.adfc4680.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer-item">
+        <p class="footer-item__text">Feel free to contact
+        <a class="footer-item__contact" href="tel:+61(0)383766284"> +61 (0) 383 766 284</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-text">
+    <p class="footer-text__ice">©2022-IceCream. All Rights Reserved.</p>
+  </div>
+</footer>
+
 
     <!-- ======== JS ============ -->
     <script src="/index.86bf7e22.js"></script>
