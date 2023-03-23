@@ -1,0 +1,66 @@
+.section {
+    padding-bottom: 94px;
+
+}
+
+.clients__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.7;
+    text-align: center;
+    
+    margin-bottom: 50px;
+}
+
+.clients-group {
+    display: flex;
+    flex-direction: row;
+    transition: color var(--animation-time);
+
+    &:hover,
+    &:focus {
+        color: var(--accent);
+    }
+}
+
+.clients__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    box-sizing: border-box;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: #afb1b8;
+
+
+    transition: border var(--animation-time);
+
+    &:not(:last-child) {
+        margin-right: 30px;
+        }
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent);
+    }    
+}
+
+.clients-icon {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+    transition: border-radius var(--animation-time);
+    transition: fill var(--animation-time);
+    
+    
+    .clients__card:hover &,
+    .clients__card:focus & {
+        fill: var(--accent);
+    }
+}
+
+
+
+
